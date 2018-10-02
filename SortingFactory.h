@@ -12,10 +12,6 @@ template <typename T>
 class RegisteredInFactory
 {
 protected:
-    RegisteredInFactory()
-    {
-        (void)registered;
-    }
     static const bool registered;
 };
 
