@@ -12,5 +12,4 @@ private:
     {
         (void)RegisteredInFactory<CountSort>::registered;
     }
-    static void sortImpl(std::vector<unsigned>& values, unsigned indexLow, unsigned indexHigh);
 };
