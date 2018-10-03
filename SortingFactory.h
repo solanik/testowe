@@ -32,11 +32,12 @@ public:
     };
 
     using SortingFunction = std::function<void (std::vector<unsigned>&)>;
+    using SortingAlgorithms = std::unordered_map<std::string, SortingFactory::SortingFunction>;
 
     static SortingFunction getSortingAlgorithm(std::string name);
     static bool addSortingAlgorithm(std::string name, SortingFunction algorithm);
 private:
-    static std::unordered_map<std::string, SortingFactory::SortingFunction> soringAlgorithms;
+    static SortingAlgorithms& getAlgorithms();
 };
 
 template <typename T>
