@@ -22,7 +22,8 @@ void HeapSort::sort(std::vector<unsigned>& values)
 void HeapSort::heapify(std::vector<unsigned>::iterator begin, std::vector<unsigned>::iterator end, unsigned index)
 {
     auto valuesSize = std::distance(begin, end);
-    if (valuesSize <= 1) return;
+    if (valuesSize <= 1)
+        return;
     auto largestIndex = index;
     auto leftIndex = index*2 + 1;
     auto rightIndex = leftIndex + 1;
